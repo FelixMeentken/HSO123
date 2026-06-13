@@ -10,6 +10,13 @@ export function ChatKitPanel() {
 
   const chatkit = useChatKit({
     api: { getClientSecret },
+      startScreen: {
+    greeting: "Willkommen beim HSO Customer Service Agent",
+    prompts: [
+      { label: "Rücksendung", prompt: "Meine CustomerID ist nnnn und ich möchte mein Produkt zurücksenden" },
+      { label: "Test1", prompt: "Test123" },
+    ],
+  },
   });
 
   return (
